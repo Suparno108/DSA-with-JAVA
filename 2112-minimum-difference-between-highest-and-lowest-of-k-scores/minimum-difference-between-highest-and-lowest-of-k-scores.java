@@ -3,14 +3,10 @@ class Solution {
         Arrays.sort(nums);
         int n = nums.length;
         int min = Integer.MAX_VALUE;
-        if(k==1){
-            return 0;
-        }else{
-            for(int i=k-1;i<n;i++){
-                int x= (nums[i]-nums[i-(k-1)]);
-                if(min>x){
-                    min = x;
-                }
+        for(int i=k-1;i<n;i++){
+            int x= (nums[i]-nums[i-(k-1)]);
+            if(min>x){
+                min = x;
             }
         }
         return min;
