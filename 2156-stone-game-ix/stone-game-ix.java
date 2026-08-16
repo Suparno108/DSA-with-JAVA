@@ -14,16 +14,16 @@
 // }
 class Solution {
     public boolean stoneGameIX(int[] stones) {
-        int[] count = new int[3];
+        int[] arr = new int[3];
 
         for (int i : stones) {
-            count[i % 3]++;
+            arr[i % 3]++;
         }
 
-        if (count[0] % 2 == 0) {
-            return count[1] > 0 && count[2] > 0;
+        if (arr[0] % 2 == 0) {
+            return arr[1] > 0 && arr[2] > 0;
         }
 
-        return Math.abs(count[1] - count[2]) > 2;
+        return Math.abs(arr[1] - arr[2]) > 2;
     }
 }
